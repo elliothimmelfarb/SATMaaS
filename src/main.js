@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import { LoadingState } from 'src/config/loading-state';
 import Navigation from 'components/Navigation/navigation';
 import Loader from 'components/Loader/loader';
+import store from './store';
 
 Vue.use(VueRouter);
 
@@ -18,6 +19,7 @@ export const router = new VueRouter({
 });
 
 new Vue({
+  store,
   router,
   components: {
     Navigation,
