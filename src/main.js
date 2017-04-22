@@ -4,7 +4,8 @@ import VueRouter from 'vue-router';
 import { LoadingState } from 'src/config/loading-state';
 import Navigation from 'components/Navigation/navigation';
 import Loader from 'components/Loader/loader';
-import store from './store';
+import HalfPage from 'components/HalfPage/halfpage';
+import VerbsInput from 'components/VerbsInput/verbsInput';
 
 Vue.use(VueRouter);
 
@@ -18,12 +19,16 @@ export const router = new VueRouter({
   linkActiveClass: 'active'
 });
 
+import store from './store';
+
 new Vue({
   store,
   router,
   components: {
     Navigation,
-    Loader
+    Loader,
+    HalfPage,
+    VerbsInput
   },
 
   data(){
